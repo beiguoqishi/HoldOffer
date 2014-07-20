@@ -1,0 +1,360 @@
+TCocosDenshion iOS
+v6
+r1
+cCheck dependencies
+cCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.o /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDAudioManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.o /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CocosDenshion.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.o /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.o /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDOpenALSupport.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios/libCocosDenshion\ iOS.a normal i386
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
+c000000005348F8C50000000000000198
+t1397291205
+s408
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
+c0000000053201FD900000000000003B4
+t1394614233
+s948
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
+c0000000053201FDC000000000000019E
+t1394614236
+s414
+
+N/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CDAudioManager.o
+t1405866187
+s91524
+
+N/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CDOpenALSupport.o
+t1405866187
+s14436
+
+N/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CocosDenshion iOS.LinkFileList
+c0000000053CBD0CB0000000000000371
+t1405866187
+s881
+
+N/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CocosDenshion.o
+t1405866187
+s124888
+
+N/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/SimpleAudioEngine.o
+t1405866188
+s72308
+
+N/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o
+t1405866187
+s36400
+
+N/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDAudioManager.m
+c00000000538548A6000000000000787A
+t1401243814
+s30842
+
+N/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDOpenALSupport.m
+c00000000538548A60000000000002AA4
+t1401243814
+s10916
+
+N/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CocosDenshion.m
+c00000000538548A6000000000000CE44
+t1401243814
+s52804
+
+N/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm
+c00000000538548A60000000000001DF3
+t1401243814
+s7667
+
+N/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m
+c00000000538548A60000000000001663
+t1401243814
+s5731
+
+N/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios/libCocosDenshion iOS.a
+t2
+s0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies861f744b087cb941^42cd744b087cb941^---0#1#1#--18"Check dependencies36"749929B5-6779-4EAD-80C9-A630AE21F852-
+
+CCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.o /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDAudioManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427558987.456719
+e427558987.721295
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CDAudioManager.o
+x/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDAudioManager.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDAudioManager.m
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDAudioManager.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CocosDenshion.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDConfig.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDOpenALSupport.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDAudioManager.m294"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.o [1m/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDAudioManager.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler1805754b087cb941^83a7b84b087cb941^---0#0#1#-19%DVTDocumentLocation2@99"file:///Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDAudioManager.m0000000000000000^4441"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.o [1m/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDAudioManager.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/liupengtao/sdk/android-ndk-r9d/:/usr/local/bin:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk:/Users/liupengtao/projects/cocos2d-x-3.1.1/tools/cocos2d-console/bin:/Users/liupengtao/.rvm/gems/ruby-2.1.1/bin:/Users/liupengtao/.rvm/gems/ruby-2.1.1@global/bin:/Users/liupengtao/.rvm/rubies/ruby-2.1.1/bin:/opt/local/bin:/opt/local/sbin:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/liupengtao/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -DCC_TARGET_OS_IPHONE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.1.1 -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/CocosDenshion\ iOS.hmap -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/.. -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/editor-support -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/platform/ios -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios/include -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources/i386 -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources -F/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios -MMD -MT dependencies -MF /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.d --serialize-diagnostics /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.dia -c /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDAudioManager.m -o /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.o36"70B48501-1B17-4D5A-B730-4A688838F2DE-
+b1E3D7260-2DD3-4869-A8E4-73523BD03C16
+
+CCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.o /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDOpenALSupport.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427558987.457487
+e427558987.615614
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CDOpenALSupport.o
+x/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDOpenALSupport.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDOpenALSupport.m
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDOpenALSupport.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CocosDenshion.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDConfig.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compile /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDOpenALSupport.m296"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.o [1m/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDOpenALSupport.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler6f46754b087cb941^46999d4b087cb941^---0#0#1#-19%DVTDocumentLocation2@100"file:///Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDOpenALSupport.m0000000000000000^4447"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.o [1m/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDOpenALSupport.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/liupengtao/sdk/android-ndk-r9d/:/usr/local/bin:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk:/Users/liupengtao/projects/cocos2d-x-3.1.1/tools/cocos2d-console/bin:/Users/liupengtao/.rvm/gems/ruby-2.1.1/bin:/Users/liupengtao/.rvm/gems/ruby-2.1.1@global/bin:/Users/liupengtao/.rvm/rubies/ruby-2.1.1/bin:/opt/local/bin:/opt/local/sbin:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/liupengtao/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -DCC_TARGET_OS_IPHONE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.1.1 -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/CocosDenshion\ iOS.hmap -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/.. -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/editor-support -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/platform/ios -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios/include -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources/i386 -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources -F/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios -MMD -MT dependencies -MF /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.d --serialize-diagnostics /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.dia -c /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDOpenALSupport.m -o /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.o36"946A682E-0403-4EBA-B0EF-BB1379069D7B-
+b1E3D7260-2DD3-4869-A8E4-73523BD03C16
+
+CCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.o /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CocosDenshion.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427558987.456880
+e427558987.673632
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CocosDenshion.o
+x/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CocosDenshion.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CocosDenshion.m
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CocosDenshion.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDConfig.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDOpenALSupport.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Compile /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CocosDenshion.m292"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.o [1m/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CocosDenshion.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler1b10754b087cb941^ac73ac4b087cb941^---0#0#1#-19%DVTDocumentLocation2@98"file:///Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CocosDenshion.m0000000000000000^4435"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.o [1m/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CocosDenshion.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/liupengtao/sdk/android-ndk-r9d/:/usr/local/bin:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk:/Users/liupengtao/projects/cocos2d-x-3.1.1/tools/cocos2d-console/bin:/Users/liupengtao/.rvm/gems/ruby-2.1.1/bin:/Users/liupengtao/.rvm/gems/ruby-2.1.1@global/bin:/Users/liupengtao/.rvm/rubies/ruby-2.1.1/bin:/opt/local/bin:/opt/local/sbin:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/liupengtao/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -DCC_TARGET_OS_IPHONE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.1.1 -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/CocosDenshion\ iOS.hmap -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/.. -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/editor-support -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/platform/ios -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios/include -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources/i386 -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources -F/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios -MMD -MT dependencies -MF /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.d --serialize-diagnostics /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.dia -c /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CocosDenshion.m -o /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.o36"FC33AF3E-09D7-4C92-A3F7-C5D01E395F11-
+b1E3D7260-2DD3-4869-A8E4-73523BD03C16
+
+CCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.o /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+s427558987.457079
+e427558988.554013
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/SimpleAudioEngine.o
+x/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/include/SimpleAudioEngine.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/include/Export.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDAudioManager.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CocosDenshion.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDConfig.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDOpenALSupport.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/cocos2d.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/ccConfig.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCPlatformConfig.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCRef.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCPlatformMacros.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/platform/ios/CCPlatformDefine.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCRefPtr.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/ccMacros.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCConsole.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/platform/ios/CCStdC.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCVector.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCMap.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCAutoreleasePool.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCNS.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/math/CCGeometry.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/math/CCMath.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/math/Vec2.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/math/CCMathBase.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/math/Vec2.inl
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/math/Vec3.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/math/Vec3.inl
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/math/Mat4.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/math/Vec4.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/math/Vec4.inl
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/math/Mat4.inl
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/math/Quaternion.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/math/Quaternion.inl
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCData.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCValue.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/ccTypes.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/platform/ios/CCGL.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCConfiguration.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCDirector.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCLabelAtlas.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCAtlasNode.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCNode.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCEventDispatcher.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCEventListener.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCEvent.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCScriptSupport.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/platform/CCCommon.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCTouch.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCEventTouch.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCEventKeyboard.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCProtocols.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/renderer/CCTexture2D.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/math/CCAffineTransform.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/renderer/ccGLStateCache.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/renderer/CCQuadCommand.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/renderer/CCRenderCommand.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/renderer/CCGLProgramState.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/renderer/CCRenderCommandPool.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCScheduler.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/uthash.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/base64.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/ZipUtils.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCProfiling.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/ccUTF8.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCUserDefault.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCIMEDelegate.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCIMEDispatcher.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCEventType.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCEventListenerTouch.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCEventListenerKeyboard.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCEventListenerMouse.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCEventMouse.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCEventAcceleration.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCEventListenerAcceleration.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCEventCustom.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCEventListenerCustom.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCEventFocus.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCEventListenerFocus.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/math/MathUtil.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/math/MathUtil.inl
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/math/CCVertex.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCAction.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCActionInterval.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCSpriteFrame.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCAnimation.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCActionCamera.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCActionManager.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCActionEase.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCActionPageTurn3D.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCActionGrid3D.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCActionGrid.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCActionInstant.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCActionProgressTimer.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCActionTiledGrid.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCActionTween.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCActionCatmullRom.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCTweenFunction.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCDrawingPrimitives.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCDrawNode.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/renderer/CCCustomCommand.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCLabelTTF.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCLabelBMFont.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCLabel.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCSpriteBatchNode.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/renderer/CCTextureAtlas.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/renderer/CCBatchCommand.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/renderer/CCGLProgram.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCFontAtlas.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCFontFNT.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCFont.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCLayer.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/physics/CCPhysicsWorld.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCScene.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCTransition.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCTransitionPageTurn.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCTransitionProgress.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCMenu.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCMenuItem.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCClippingNode.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/renderer/CCGroupCommand.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCMotionStreak.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCProgressTimer.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCSprite.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/physics/CCPhysicsBody.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/physics/CCPhysicsShape.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCRenderTexture.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/platform/CCImage.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCNodeGrid.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCParticleBatchNode.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCParticleSystem.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/deprecated/CCString.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/deprecated/CCArray.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/ccCArray.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCDataVisitor.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCParticleExamples.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCParticleSystemQuad.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCGrabber.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCGrid.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/renderer/CCRenderer.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/renderer/CCGLProgramCache.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/renderer/ccShaders.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/renderer/CCTextureCache.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/physics/CCPhysicsContact.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/physics/CCPhysicsJoint.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/platform/CCDevice.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/platform/CCFileUtils.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/platform/CCSAXParser.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/platform/CCThread.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/platform/ios/CCApplication.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/platform/CCApplicationProtocol.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/platform/ios/CCGLView.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/platform/CCGLViewProtocol.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCAnimationCache.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCSpriteFrameCache.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCTextFieldTTF.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCParallaxNode.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCTMXLayer.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCTMXObjectGroup.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCTMXXMLParser.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCTMXTiledMap.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCTileMapAtlas.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCComponent.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/2d/CCComponentContainer.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/3d/CCSprite3D.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/renderer/CCMeshCommand.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/3d/CCMesh.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/deprecated/CCDictionary.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/deprecated/CCSet.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/deprecated/CCInteger.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/deprecated/CCFloat.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/deprecated/CCDouble.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/deprecated/CCBool.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/deprecated/CCNotificationCenter.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/deprecated/CCDeprecated.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Compile /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm303"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.o [1m/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm[0m normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler431e754b087cb941^a6d48d4c087cb941^---0#0#1#-19%DVTDocumentLocation2@103"file:///Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm0000000000000000^4537"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.o [1m/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm[0m normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/liupengtao/sdk/android-ndk-r9d/:/usr/local/bin:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk:/Users/liupengtao/projects/cocos2d-x-3.1.1/tools/cocos2d-console/bin:/Users/liupengtao/.rvm/gems/ruby-2.1.1/bin:/Users/liupengtao/.rvm/gems/ruby-2.1.1@global/bin:/Users/liupengtao/.rvm/rubies/ruby-2.1.1/bin:/opt/local/bin:/opt/local/sbin:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/liupengtao/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wnon-virtual-dtor -Woverloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -DCC_TARGET_OS_IPHONE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.1.1 -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/CocosDenshion\ iOS.hmap -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/.. -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/editor-support -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/platform/ios -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios/include -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources/i386 -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources -F/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios -MMD -MT dependencies -MF /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.d --serialize-diagnostics /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.dia -c /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm -o /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.o36"D27DAB16-24A9-4767-9F9B-E2838EFE0C43-
+b1E3D7260-2DD3-4869-A8E4-73523BD03C16
+
+CCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427558987.457296
+e427558987.696232
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o
+x/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDAudioManager.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CocosDenshion.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDConfig.h
+d/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/CDOpenALSupport.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m310"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o [1m/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler0039754b087cb941^923db24b087cb941^---0#0#1#-19%DVTDocumentLocation2@107"file:///Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m0000000000000000^4489"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o [1m/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/liupengtao/sdk/android-ndk-r9d/:/usr/local/bin:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk:/Users/liupengtao/projects/cocos2d-x-3.1.1/tools/cocos2d-console/bin:/Users/liupengtao/.rvm/gems/ruby-2.1.1/bin:/Users/liupengtao/.rvm/gems/ruby-2.1.1@global/bin:/Users/liupengtao/.rvm/rubies/ruby-2.1.1/bin:/opt/local/bin:/opt/local/sbin:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/liupengtao/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -DCC_TARGET_OS_IPHONE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.1.1 -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/CocosDenshion\ iOS.hmap -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/.. -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/editor-support -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/platform/ios -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios/include -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources/i386 -I/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources -F/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios -MMD -MT dependencies -MF /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.d --serialize-diagnostics /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.dia -c /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m -o /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o36"AE041672-DC6C-41C9-A305-0E880B2E6C4E-
+b1E3D7260-2DD3-4869-A8E4-73523BD03C16
+
+CLibtool /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios/libCocosDenshion\ iOS.a normal i386
+s427558988.554698
+e427558988.560403
+r1
+xLibtool
+x/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios/libCocosDenshion iOS.a
+xnormal
+xi386
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"[1mLibtool[0m /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios/libCocosDenshion\ iOS.a normal i386115"[1mLibtool[0m /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios/libCocosDenshion\ iOS.a normal i38673128e4c087cb941^9f778f4c087cb941^---0#0#1#--1697"[1mLibtool[0m /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios/libCocosDenshion\ iOS.a normal i386    cd /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build    export IPHONEOS_DEPLOYMENT_TARGET=5.1.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/liupengtao/sdk/android-ndk-r9d/:/usr/local/bin:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk:/Users/liupengtao/projects/cocos2d-x-3.1.1/tools/cocos2d-console/bin:/Users/liupengtao/.rvm/gems/ruby-2.1.1/bin:/Users/liupengtao/.rvm/gems/ruby-2.1.1@global/bin:/Users/liupengtao/.rvm/rubies/ruby-2.1.1/bin:/opt/local/bin:/opt/local/sbin:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/liupengtao/sdk/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/liupengtao/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios -filelist /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion\ iOS.LinkFileList -o /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/publish/ios/libCocosDenshion\ iOS.a36"E3AD6B88-F26C-407E-BE54-7037436C59F8-
+b1E3D7260-2DD3-4869-A8E4-73523BD03C16
+

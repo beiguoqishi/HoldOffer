@@ -1,0 +1,30 @@
+dependencies: \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/external/Box2D/Dynamics/b2World.cpp \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Dynamics/b2World.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Common/b2Math.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Common/b2Settings.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Common/b2BlockAllocator.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Common/b2StackAllocator.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Dynamics/b2ContactManager.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Collision/b2BroadPhase.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Collision/b2Collision.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Collision/b2DynamicTree.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Common/b2GrowableStack.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Dynamics/b2WorldCallbacks.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Dynamics/b2TimeStep.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Dynamics/b2Body.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Collision/Shapes/b2Shape.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Dynamics/b2Fixture.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Dynamics/b2Island.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Dynamics/Joints/b2PulleyJoint.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Dynamics/Joints/b2Joint.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Dynamics/Contacts/b2Contact.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Dynamics/Contacts/b2ContactSolver.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Collision/Shapes/b2CircleShape.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Collision/Shapes/b2EdgeShape.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Collision/Shapes/b2ChainShape.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Collision/Shapes/b2PolygonShape.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Collision/b2TimeOfImpact.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Collision/b2Distance.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Common/b2Draw.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../external/Box2D/Common/b2Timer.h

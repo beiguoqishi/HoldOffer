@@ -1,0 +1,22 @@
+dependencies: \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/cocos/base/CCDataVisitor.cpp \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/base/CCRef.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/base/CCPlatformMacros.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/base/ccConfig.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/base/CCPlatformConfig.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/platform/ios/CCPlatformDefine.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/deprecated/CCBool.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/base/CCDataVisitor.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/deprecated/CCInteger.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/platform/CCCommon.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/deprecated/CCFloat.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/deprecated/CCDouble.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/deprecated/CCString.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/deprecated/CCArray.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/base/ccCArray.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/base/ccMacros.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/base/CCConsole.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/platform/ios/CCStdC.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/deprecated/CCDictionary.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/base/uthash.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/cocos2d/build/../cocos/deprecated/CCSet.h
