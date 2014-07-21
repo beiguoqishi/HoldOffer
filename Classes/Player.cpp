@@ -5,11 +5,11 @@
 //  Created by liupengtao on 14-7-19.
 //
 //
-
 #include "Player.h"
 #include "VisibleRect.h"
 #include "Box.h"
 #include "Ball.h"
+#include "PopDialog.h"
 
 Player::Player() {
     
@@ -115,13 +115,23 @@ void Player::initComponent() {
 
 void Player::generateBall(float dt) {
     int seg = rand() % 2;
-    auto text =firstBarrierScore[rand() % 3];
+    std::string text = "";
+    int score = 0;
+    if (barrier == 1) {
+        score =firstBarrierScore[rand() % 3];
+        text = StringUtils::format("%d",score);
+        if (seg == 1) {
+            text = StringUtils::format("-%d",score);
+        }
+    }
+    
     Vec2 p = positiveChannel[rand() % 3];
+    
     if (seg == 1) {
-        text = "-" + text;
         p = negativeChannel[rand() % 3];
     }
     auto ball = Ball::create(Color4F(CCRANDOM_0_1(),CCRANDOM_0_1(),CCRANDOM_0_1(),1), Color4F(CCRANDOM_0_1(),CCRANDOM_0_1(),CCRANDOM_0_1(),1), text);
+    ball->setScore(score);
     ball->setPartial(LEFT_BOX_TAG);
     if (seg == 1) {
         ball->setPartial(RIGHT_BOX_TAG);
@@ -137,15 +147,64 @@ void Player::generateBall(float dt) {
 void Player::doCalculateScore(float dt) {
     for (Ball* ball : balls) {
         if (ball && ball->getPartial() == LEFT_BOX_TAG && ball->isCollisionBox(leftBox)) {
+            totalScore += ball->getScore();
             ballToDest(ball);
             ball = nullptr;
             CCLOG("Player::leftBox");
         }
         if (ball && ball->getPartial() == RIGHT_BOX_TAG && ball->isCollisionBox(rightBox)) {
+            totalScore -= ball->getScore();
             ballToDest(ball);
             ball = nullptr;
             CCLOG("Player::rightBox");
         }
+    }
+    
+    switch (barrier) {
+        case 1:
+        {
+            if (totalScore >= 5) {
+                totalScore = firstBarrierPassScore;
+                unschedule(schedule_selector(Player::doCalculateScore));
+                unschedule(schedule_selector(Player::generateBall));
+                for(Ball* ball : balls) {
+                    if (ball) {
+                        ball->stopAllActions();
+//                        ballToDest(ball);
+//                        ball = nullptr;
+                    }
+                }
+                Color4B color = Color4B(153,153,153,127);
+                auto pop = PopDialog::create(color);
+                
+                auto label = Label::createWithSystemFont("简历投递成功", "", 28);
+                label->setPosition(VisibleRect::center() + Vec2(0,30));
+                pop->addChild(label);
+                
+                auto nextMenu = MenuItemFont::create("开始笔试", [=](Ref* node){
+                    CCLOG("Player::Click 开始笔试");
+                });
+                auto menu = Menu::create(nextMenu,nullptr);
+                menu->setGlobalZOrder(1);
+                menu->setPosition(VisibleRect::center() - Vec2(0,60));
+                pop->addChild(menu);
+                
+                pop->setPosition(Vec2::ZERO);
+                addChild(pop,2);
+            }
+            auto label = static_cast<Label*>(getChildByTag(FIRST_BARRIER_SCORE_TIP_TAG));
+            if (label) {
+                label->setString(StringUtils::format("简历完成:%d%%",totalScore));
+            } else {
+                label = Label::createWithSystemFont(StringUtils::format("简历完成:%d%%",totalScore), "Arial", 25);
+                label->setTag(FIRST_BARRIER_SCORE_TIP_TAG);
+                label->setPosition(VisibleRect::center());
+                addChild(label);
+            }
+        }
+        break;
+        default:
+            break;
     }
 }
 

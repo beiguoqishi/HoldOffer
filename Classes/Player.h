@@ -33,11 +33,12 @@ protected:
 private:
     void initComponent();
     void ballToDest(Node* node);
-    const std::string firstBarrierScore[3] = {"2%","3%","5%"};
+    const int firstBarrierScore[3] = {2,3,5};
     EventListenerTouchOneByOne* listener;
     enum NodeTag {
         LEFT_BOX_TAG,
-        RIGHT_BOX_TAG
+        RIGHT_BOX_TAG,
+        FIRST_BARRIER_SCORE_TIP_TAG
     };
     
     const Vec2 positiveChannel[3] = {
@@ -55,6 +56,9 @@ private:
     Vector<Ball*> balls;
     Box* leftBox;
     Box* rightBox;
+    int barrier = 1;
+    int totalScore = 0;
+    const int firstBarrierPassScore = 100;
 };
 
 #endif /* defined(__HoldOffer__Player__) */

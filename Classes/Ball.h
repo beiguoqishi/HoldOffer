@@ -32,6 +32,7 @@ private:
     const float outerRadius = 20;
     const float innerRadius = 18;
     CC_SYNTHESIZE(int, partial, Partial);
+    CC_SYNTHESIZE(int, score, Score);
 };
 
 #endif /* defined(__HoldOffer__Ball__) */

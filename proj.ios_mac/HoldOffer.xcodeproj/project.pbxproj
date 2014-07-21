@@ -67,6 +67,7 @@
 		5FD1D269197A7D56000851FA /* Box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FD1D267197A7D56000851FA /* Box.cpp */; };
 		5FD1D26C197B7482000851FA /* Ball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FD1D26A197B7482000851FA /* Ball.cpp */; };
 		5FD1D26E197C089D000851FA /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FD1D26D197C089D000851FA /* box.png */; };
+		5FD1D271197D62EC000851FA /* PopDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FD1D26F197D62EC000851FA /* PopDialog.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -274,6 +275,8 @@
 		5FD1D26A197B7482000851FA /* Ball.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ball.cpp; sourceTree = "<group>"; };
 		5FD1D26B197B7482000851FA /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
 		5FD1D26D197C089D000851FA /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
+		5FD1D26F197D62EC000851FA /* PopDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PopDialog.cpp; sourceTree = "<group>"; };
+		5FD1D270197D62EC000851FA /* PopDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopDialog.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -362,6 +365,8 @@
 				5FD1D268197A7D56000851FA /* Box.h */,
 				5FD1D26A197B7482000851FA /* Ball.cpp */,
 				5FD1D26B197B7482000851FA /* Ball.h */,
+				5FD1D26F197D62EC000851FA /* PopDialog.cpp */,
+				5FD1D270197D62EC000851FA /* PopDialog.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -698,6 +703,7 @@
 				5FD1D260197A7391000851FA /* Player.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				5FD1D271197D62EC000851FA /* PopDialog.cpp in Sources */,
 				5FD1D266197A7851000851FA /* VisibleRect.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 			);
