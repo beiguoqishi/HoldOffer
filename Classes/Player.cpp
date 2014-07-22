@@ -11,6 +11,8 @@
 #include "Ball.h"
 #include "PopDialog.h"
 
+using namespace std;
+
 Player::Player() {
     
 }
@@ -31,9 +33,18 @@ bool Player::init() {
         return false;
     }
     initComponent();
+    scheduleTask();
+    return true;
+}
+
+void Player::scheduleTask() {
     schedule(schedule_selector(Player::generateBall), 0.4f);
     schedule(schedule_selector(Player::doCalculateScore));
-    return true;
+}
+
+void Player::unscheduleTask() {
+    unschedule(schedule_selector(Player::doCalculateScore));
+    unschedule(schedule_selector(Player::generateBall));
 }
 
 void Player::initComponent() {
@@ -115,14 +126,15 @@ void Player::initComponent() {
 
 void Player::generateBall(float dt) {
     int seg = rand() % 2;
-    std::string text = "";
-    int score = 0;
+    int score = barrierScore[rand() % 3];
+    std::string text = StringUtils::format("%d",score);
+    if (seg == 1) {
+        text = StringUtils::format("-%d",score);
+    }
     if (barrier == 1) {
-        score =firstBarrierScore[rand() % 3];
-        text = StringUtils::format("%d",score);
-        if (seg == 1) {
-            text = StringUtils::format("-%d",score);
-        }
+        text += "%";
+    } else {
+        text += "分";
     }
     
     Vec2 p = positiveChannel[rand() % 3];
@@ -144,74 +156,138 @@ void Player::generateBall(float dt) {
     balls.pushBack(ball);
 }
 
+void Player::reset(int barrier) {
+    this->removeAllChildren();
+    _eventDispatcher->removeAllEventListeners();
+    this->barrier = barrier;
+    this->elliapsedTime = 0;
+    this->totalScore = 0;
+    balls.clear();
+    initComponent();
+    scheduleTask();
+}
+
+void Player::clearRunningBalls() {
+    for(Ball* ball : balls) {
+        if (ball) {
+            ballToDest(ball);
+        }
+    }
+    balls.clear();
+}
+
 void Player::doCalculateScore(float dt) {
+    elliapsedTime += dt;
+    auto label = static_cast<Label*>(getChildByTag(TIME_TIP_TAG));
+    if (label) {
+        label->setString(StringUtils::format("用时:%2.1f",elliapsedTime));
+    } else {
+        label = Label::createWithSystemFont(StringUtils::format("用时:%2.1f",elliapsedTime), "Arial", 25);
+        label->setTag(TIME_TIP_TAG);
+        label->setPosition(VisibleRect::center() - Vec2(0,30));
+        addChild(label);
+    }
     for (Ball* ball : balls) {
         if (ball && ball->getPartial() == LEFT_BOX_TAG && ball->isCollisionBox(leftBox)) {
             totalScore += ball->getScore();
             ballToDest(ball);
-            ball = nullptr;
             CCLOG("Player::leftBox");
         }
         if (ball && ball->getPartial() == RIGHT_BOX_TAG && ball->isCollisionBox(rightBox)) {
             totalScore -= ball->getScore();
             ballToDest(ball);
-            ball = nullptr;
             CCLOG("Player::rightBox");
         }
     }
-    
+    for (Ball* ball : balls) {
+        if (!ball->isRunning()) {
+            balls.eraseObject(ball);
+        }
+    }
+    std::string failureTip,failureAction,successTip,successAction;
+    char* processFormatTip;
     switch (barrier) {
         case 1:
         {
-            if (totalScore >= 5) {
-                totalScore = firstBarrierPassScore;
-                unschedule(schedule_selector(Player::doCalculateScore));
-                unschedule(schedule_selector(Player::generateBall));
-                for(Ball* ball : balls) {
-                    if (ball) {
-                        ball->stopAllActions();
-//                        ballToDest(ball);
-//                        ball = nullptr;
-                    }
-                }
-                Color4B color = Color4B(153,153,153,127);
-                auto pop = PopDialog::create(color);
-                
-                auto label = Label::createWithSystemFont("简历投递成功", "", 28);
-                label->setPosition(VisibleRect::center() + Vec2(0,30));
-                pop->addChild(label);
-                
-                auto nextMenu = MenuItemFont::create("开始笔试", [=](Ref* node){
-                    CCLOG("Player::Click 开始笔试");
-                });
-                auto menu = Menu::create(nextMenu,nullptr);
-                menu->setGlobalZOrder(1);
-                menu->setPosition(VisibleRect::center() - Vec2(0,60));
-                pop->addChild(menu);
-                
-                pop->setPosition(Vec2::ZERO);
-                addChild(pop,2);
-            }
-            auto label = static_cast<Label*>(getChildByTag(FIRST_BARRIER_SCORE_TIP_TAG));
-            if (label) {
-                label->setString(StringUtils::format("简历完成:%d%%",totalScore));
-            } else {
-                label = Label::createWithSystemFont(StringUtils::format("简历完成:%d%%",totalScore), "Arial", 25);
-                label->setTag(FIRST_BARRIER_SCORE_TIP_TAG);
-                label->setPosition(VisibleRect::center());
-                addChild(label);
-            }
+            failureTip ="简历投递失败,用时超限！";
+            failureAction = "重新开始";
+            successTip = "简历投递成功";
+            successAction = "开始笔试";
+            processFormatTip = const_cast<char*>(string("简历完成:%d%%").c_str());
         }
         break;
+        case 2:
+        {
+            failureTip ="笔试未通过,用时超限！";
+            failureAction = "潜力测评";
+            successTip = "笔试通过";
+            successAction = "开始面试";
+            processFormatTip = const_cast<char*>(string("笔试分数:%d").c_str());
+        }
+            break;
         default:
             break;
+    }
+    
+    if (elliapsedTime >= 20.f) {
+        unscheduleTask();
+        clearRunningBalls();
+        Color4B color = Color4B(153,153,153,127);
+        auto pop = PopDialog::create(color);
+        
+        auto label = Label::createWithSystemFont(failureTip, "", 28);
+        label->setPosition(VisibleRect::center() + Vec2(0,30));
+        pop->addChild(label);
+        
+        auto nextMenu = MenuItemFont::create(failureAction, [=](Ref* node){
+            reset(barrier);
+        });
+        auto menu = Menu::create(nextMenu,nullptr);
+        menu->setGlobalZOrder(1);
+        menu->setPosition(VisibleRect::center() - Vec2(0,60));
+        pop->addChild(menu);
+        
+        pop->setPosition(Vec2::ZERO);
+        addChild(pop,2);
+        return;
+    }
+    if (totalScore >= 20) {
+        totalScore = firstBarrierPassScore;
+        unscheduleTask();
+        
+        clearRunningBalls();
+        Color4B color = Color4B(153,153,153,127);
+        auto pop = PopDialog::create(color);
+        
+        auto label = Label::createWithSystemFont(successTip, "", 28);
+        label->setPosition(VisibleRect::center() + Vec2(0,30));
+        pop->addChild(label);
+        
+        auto nextMenu = MenuItemFont::create(successAction, [=](Ref* node){
+            reset(++barrier);
+        });
+        auto menu = Menu::create(nextMenu,nullptr);
+        menu->setGlobalZOrder(1);
+        menu->setPosition(VisibleRect::center() - Vec2(0,60));
+        pop->addChild(menu);
+        
+        pop->setPosition(Vec2::ZERO);
+        addChild(pop,2);
+    }
+    auto processLabel = static_cast<Label*>(getChildByTag(BARRIER_SCORE_TIP_TAG));
+    if (processLabel) {
+        processLabel->setString(StringUtils::format(processFormatTip,totalScore));
+    } else {
+        processLabel = Label::createWithSystemFont(StringUtils::format(processFormatTip,totalScore), "Arial", 25);
+        processLabel->setTag(BARRIER_SCORE_TIP_TAG);
+        processLabel->setPosition(VisibleRect::center());
+        addChild(processLabel);
     }
 }
 
 void Player::ballToDest(Node* node) {
+    node->stopAllActions();
     node->removeFromParent();
-    Ball* ball = static_cast<Ball*>(node);
-    balls.eraseObject(ball);
 }
 
 void Player::onEnter() {

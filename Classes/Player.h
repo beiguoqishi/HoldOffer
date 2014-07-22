@@ -33,12 +33,17 @@ protected:
 private:
     void initComponent();
     void ballToDest(Node* node);
-    const int firstBarrierScore[3] = {2,3,5};
+    void reset(int barrier);
+    void scheduleTask();
+    void unscheduleTask();
+    void clearRunningBalls();
+    const int barrierScore[3] = {2,3,5};
     EventListenerTouchOneByOne* listener;
     enum NodeTag {
         LEFT_BOX_TAG,
         RIGHT_BOX_TAG,
-        FIRST_BARRIER_SCORE_TIP_TAG
+        BARRIER_SCORE_TIP_TAG,
+        TIME_TIP_TAG
     };
     
     const Vec2 positiveChannel[3] = {
@@ -59,6 +64,8 @@ private:
     int barrier = 1;
     int totalScore = 0;
     const int firstBarrierPassScore = 100;
+    const int firstBarrierTimeLimit = 10;
+    float elliapsedTime = 0;
 };
 
 #endif /* defined(__HoldOffer__Player__) */

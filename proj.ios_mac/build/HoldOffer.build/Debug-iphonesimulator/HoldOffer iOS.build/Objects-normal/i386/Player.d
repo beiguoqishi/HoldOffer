@@ -173,4 +173,5 @@ dependencies: \
   /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/proj.ios_mac/../cocos2d/cocos/deprecated/CCDeprecated.h \
   /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/Classes/VisibleRect.h \
   /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/Classes/Box.h \
-  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/Classes/Ball.h
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/Classes/Ball.h \
+  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/Classes/PopDialog.h
