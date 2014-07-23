@@ -68,6 +68,9 @@
 		5FD1D26C197B7482000851FA /* Ball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FD1D26A197B7482000851FA /* Ball.cpp */; };
 		5FD1D26E197C089D000851FA /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FD1D26D197C089D000851FA /* box.png */; };
 		5FD1D271197D62EC000851FA /* PopDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FD1D26F197D62EC000851FA /* PopDialog.cpp */; };
+		5FD1D274197FE0BE000851FA /* Coin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FD1D272197FE0BE000851FA /* Coin.cpp */; };
+		5FD1D277197FE8EE000851FA /* coin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FD1D275197FE8EE000851FA /* coin.png */; };
+		5FD1D278197FE8EE000851FA /* red_heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FD1D276197FE8EE000851FA /* red_heart.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -277,6 +280,10 @@
 		5FD1D26D197C089D000851FA /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
 		5FD1D26F197D62EC000851FA /* PopDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PopDialog.cpp; sourceTree = "<group>"; };
 		5FD1D270197D62EC000851FA /* PopDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopDialog.h; sourceTree = "<group>"; };
+		5FD1D272197FE0BE000851FA /* Coin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Coin.cpp; sourceTree = "<group>"; };
+		5FD1D273197FE0BE000851FA /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
+		5FD1D275197FE8EE000851FA /* coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin.png; sourceTree = "<group>"; };
+		5FD1D276197FE8EE000851FA /* red_heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_heart.png; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -367,6 +374,8 @@
 				5FD1D26B197B7482000851FA /* Ball.h */,
 				5FD1D26F197D62EC000851FA /* PopDialog.cpp */,
 				5FD1D270197D62EC000851FA /* PopDialog.h */,
+				5FD1D272197FE0BE000851FA /* Coin.cpp */,
+				5FD1D273197FE0BE000851FA /* Coin.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -482,6 +491,8 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5FD1D275197FE8EE000851FA /* coin.png */,
+				5FD1D276197FE8EE000851FA /* red_heart.png */,
 				5FD1D26D197C089D000851FA /* box.png */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
@@ -665,6 +676,7 @@
 				5FD1D26E197C089D000851FA /* box.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
+				5FD1D278197FE8EE000851FA /* red_heart.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
@@ -675,6 +687,7 @@
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
+				5FD1D277197FE8EE000851FA /* coin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,6 +718,7 @@
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				5FD1D271197D62EC000851FA /* PopDialog.cpp in Sources */,
 				5FD1D266197A7851000851FA /* VisibleRect.cpp in Sources */,
+				5FD1D274197FE0BE000851FA /* Coin.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

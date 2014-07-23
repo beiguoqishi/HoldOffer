@@ -10,6 +10,7 @@
 #include "Box.h"
 #include "Ball.h"
 #include "PopDialog.h"
+#include "Coin.h"
 
 using namespace std;
 
@@ -38,13 +39,21 @@ bool Player::init() {
 }
 
 void Player::scheduleTask() {
-    schedule(schedule_selector(Player::generateBall), 0.4f);
-    schedule(schedule_selector(Player::doCalculateScore));
+    if (!isPotentialEvaluation) {
+        schedule(schedule_selector(Player::generateBall), 0.4f);
+        schedule(schedule_selector(Player::doCalculateScore));
+    } else {
+        
+    }
 }
 
 void Player::unscheduleTask() {
     unschedule(schedule_selector(Player::doCalculateScore));
-    unschedule(schedule_selector(Player::generateBall));
+    if (!isPotentialEvaluation) {
+        unschedule(schedule_selector(Player::generateBall));
+    } else {
+        
+    }
 }
 
 void Player::initComponent() {
@@ -106,7 +115,6 @@ void Player::initComponent() {
             }
         };
 
-    CCLOG("Player::initComponent");
     leftBox = Box::create();
     leftBox->setPosition(Vec2(VisibleRect::getVisibleRect().origin.x + VisibleRect::getVisibleWidth() / 4,VisibleRect::getVisibleRect().origin.y + 20));
     leftBox->setTag(NodeTag::LEFT_BOX_TAG);
@@ -126,7 +134,8 @@ void Player::initComponent() {
 
 void Player::generateBall(float dt) {
     int seg = rand() % 2;
-    int score = barrierScore[rand() % 3];
+    int idx = rand() % 3;
+    int score = barrierScore[idx];
     std::string text = StringUtils::format("%d",score);
     if (seg == 1) {
         text = StringUtils::format("-%d",score);
@@ -142,26 +151,54 @@ void Player::generateBall(float dt) {
     if (seg == 1) {
         p = negativeChannel[rand() % 3];
     }
-    auto ball = Ball::create(Color4F(CCRANDOM_0_1(),CCRANDOM_0_1(),CCRANDOM_0_1(),1), Color4F(CCRANDOM_0_1(),CCRANDOM_0_1(),CCRANDOM_0_1(),1), text);
-    ball->setScore(score);
-    ball->setPartial(LEFT_BOX_TAG);
-    if (seg == 1) {
-        ball->setPartial(RIGHT_BOX_TAG);
+    
+    if (isPotentialEvaluation) {
+        switch (round) {
+            case 1:
+                score = firstRoundPotentialScore[idx];
+                break;
+            case 2:
+                score = secondRoundPotentialScore[idx];
+                break;
+            case 3:
+                score = thirdRoundPotentialScore[idx];
+                break;
+            default:
+                break;
+        }
+        text = StringUtils::format("%d分",score);
+        int rewardType = (rand() % redHeartRate) == 4 ? 2 : 1;
+        auto coinSprite = Coin::create(rewardType == 2 ? red_heart : coin,text);
+        coinSprite->setRewardType(rewardType);
+        coinSprite->setScore(score);
+        coinSprite->setPosition(p);
+        addChild(coinSprite);
+        
+        coinSprite->runAction(Sequence::create(MoveTo::create(3, Vec2(p.x,0)),CallFuncN::create(CC_CALLBACK_1(Player::ballToDest, this)),NULL));
+        coins.pushBack(coinSprite);
+    } else {
+        auto ball = Ball::create(Color4F(CCRANDOM_0_1(),CCRANDOM_0_1(),CCRANDOM_0_1(),1), Color4F(CCRANDOM_0_1(),CCRANDOM_0_1(),CCRANDOM_0_1(),1), text);
+        ball->setScore(score);
+        ball->setPartial(LEFT_BOX_TAG);
+        if (seg == 1) {
+            ball->setPartial(RIGHT_BOX_TAG);
+        }
+        
+        ball->setPosition(p);
+        addChild(ball);
+        
+        ball->runAction(Sequence::create(MoveTo::create(3, Vec2(p.x,0)),CallFuncN::create(CC_CALLBACK_1(Player::ballToDest, this)),NULL));
+        balls.pushBack(ball);
     }
-    
-    ball->setPosition(p);
-    addChild(ball);
-    
-    ball->runAction(Sequence::create(MoveTo::create(3, Vec2(p.x,0)),CallFuncN::create(CC_CALLBACK_1(Player::ballToDest, this)),NULL));
-    balls.pushBack(ball);
 }
 
-void Player::reset(int barrier) {
-    this->removeAllChildren();
-    _eventDispatcher->removeAllEventListeners();
+void Player::reset(int barrier,bool potentialEvaluation) {
     this->barrier = barrier;
+    this->isPotentialEvaluation = potentialEvaluation;
     this->elliapsedTime = 0;
     this->totalScore = 0;
+    this->removeAllChildren();
+    _eventDispatcher->removeAllEventListeners();
     balls.clear();
     initComponent();
     scheduleTask();
@@ -240,7 +277,11 @@ void Player::doCalculateScore(float dt) {
         pop->addChild(label);
         
         auto nextMenu = MenuItemFont::create(failureAction, [=](Ref* node){
-            reset(barrier);
+            if (barrier > 1) {
+                reset(barrier,true);
+            } else {
+                reset(barrier,false);
+            }
         });
         auto menu = Menu::create(nextMenu,nullptr);
         menu->setGlobalZOrder(1);
@@ -264,7 +305,7 @@ void Player::doCalculateScore(float dt) {
         pop->addChild(label);
         
         auto nextMenu = MenuItemFont::create(successAction, [=](Ref* node){
-            reset(++barrier);
+            reset(++barrier,false);
         });
         auto menu = Menu::create(nextMenu,nullptr);
         menu->setGlobalZOrder(1);
@@ -282,6 +323,30 @@ void Player::doCalculateScore(float dt) {
         processLabel->setTag(BARRIER_SCORE_TIP_TAG);
         processLabel->setPosition(VisibleRect::center());
         addChild(processLabel);
+    }
+}
+
+void Player::doPotentialEvaluationTask(float dt) {
+    for (Coin* coin : coins) {
+        if (coin && (coin->isCollisionBox(leftBox) || coin->isCollisionBox(rightBox))) {
+            potentialTotalScore += coin->getScore();
+            ballToDest(coin);
+        }
+    }
+    for (Coin* coin : coins) {
+        if (!coin->isRunning()) {
+            coins.eraseObject(coin);
+        }
+    }
+    
+    auto label = static_cast<Label*>(getChildByTag(POTENTIAL_SCORE_TIP_TAG));
+    if (label) {
+        label->setString(StringUtils::format("分数:%d",potentialTotalScore));
+    } else {
+        label = Label::createWithSystemFont(StringUtils::format("分数:%d",potentialTotalScore), "", 25);
+        label->setTag(POTENTIAL_SCORE_TIP_TAG);
+        label->setPosition(VisibleRect::center() - Vec2(0,30));
+        addChild(label);
     }
 }
 

@@ -15,6 +15,7 @@
 USING_NS_CC;
 class Ball;
 class Box;
+class Coin;
 
 class Player : public Layer {
 public:
@@ -33,7 +34,7 @@ protected:
 private:
     void initComponent();
     void ballToDest(Node* node);
-    void reset(int barrier);
+    void reset(int barrier,bool potentialEvaluation);
     void scheduleTask();
     void unscheduleTask();
     void clearRunningBalls();
@@ -43,7 +44,8 @@ private:
         LEFT_BOX_TAG,
         RIGHT_BOX_TAG,
         BARRIER_SCORE_TIP_TAG,
-        TIME_TIP_TAG
+        TIME_TIP_TAG,
+        POTENTIAL_SCORE_TIP_TAG
     };
     
     const Vec2 positiveChannel[3] = {
@@ -58,14 +60,26 @@ private:
     };
     Vec2 initBoxPos;
     void doCalculateScore(float dt);
+    void doPotentialEvaluationTask(float dt);
     Vector<Ball*> balls;
+    Vector<Coin*> coins;
     Box* leftBox;
     Box* rightBox;
     int barrier = 1;
     int totalScore = 0;
+    int potentialTotalScore = 0;
     const int firstBarrierPassScore = 100;
     const int firstBarrierTimeLimit = 10;
     float elliapsedTime = 0;
+    bool isPotentialEvaluation = false;
+    const int firstRoundPotentialScore[3] = {2,3,4};
+    const int secondRoundPotentialScore[3] = {4,5,6};
+    const int thirdRoundPotentialScore[3] = {7,8,9};
+    int round = 1;
+    const std::string coin = "coin.png";
+    const std::string red_heart = "red_heart.png";
+    const int redHeartRate = 8;
+    int potentialLife = 3;
 };
 
 #endif /* defined(__HoldOffer__Player__) */
