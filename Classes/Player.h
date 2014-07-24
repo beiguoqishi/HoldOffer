@@ -38,6 +38,10 @@ private:
     void scheduleTask();
     void unscheduleTask();
     void clearRunningBalls();
+	void updateLifeTip();
+	void updatePotentialScoreTip();
+	void reducePotentialLife(float dt);
+	PopDialog* createPopDialog();
     const int barrierScore[3] = {2,3,5};
     EventListenerTouchOneByOne* listener;
     enum NodeTag {
@@ -45,7 +49,8 @@ private:
         RIGHT_BOX_TAG,
         BARRIER_SCORE_TIP_TAG,
         TIME_TIP_TAG,
-        POTENTIAL_SCORE_TIP_TAG
+        POTENTIAL_SCORE_TIP_TAG,
+		POTENTIAL_LIFE_TIP_TAG
     };
     
     const Vec2 positiveChannel[3] = {
