@@ -33,8 +33,7 @@ bool Player::init() {
     if (!Layer::init()) {
         return false;
     }
-    initComponent();
-    scheduleTask();
+    reset(1, false);
     return true;
 }
 
@@ -43,16 +42,17 @@ void Player::scheduleTask() {
         schedule(schedule_selector(Player::generateBall), 0.4f);
         schedule(schedule_selector(Player::doCalculateScore));
     } else {
-        
+        schedule(schedule_selector(Player::generateBall), 0.6f);
+        schedule(schedule_selector(Player::doPotentialEvaluationTask));
     }
 }
 
 void Player::unscheduleTask() {
-    unschedule(schedule_selector(Player::doCalculateScore));
+    unschedule(schedule_selector(Player::generateBall));
     if (!isPotentialEvaluation) {
-        unschedule(schedule_selector(Player::generateBall));
+        unschedule(schedule_selector(Player::doCalculateScore));
     } else {
-        
+        unschedule(schedule_selector(Player::doPotentialEvaluationTask));
     }
 }
 
@@ -142,7 +142,14 @@ void Player::generateBall(float dt) {
     }
     if (barrier == 1) {
         text += "%";
-    } else {
+    } else if(barrier == 4) {
+        if (seg == 1) {
+            text = "阴暗/" + text + "分";
+        } else {
+            text = "阳光/" + text + "分";
+        }
+    }
+    else {
         text += "分";
     }
     
@@ -183,19 +190,42 @@ void Player::generateBall(float dt) {
 			);
         coins.pushBack(coinSprite);
     } else {
-        auto ball = Ball::create(Color4F(CCRANDOM_0_1(),CCRANDOM_0_1(),CCRANDOM_0_1(),1), Color4F(CCRANDOM_0_1(),CCRANDOM_0_1(),CCRANDOM_0_1(),1), text);
-        ball->setScore(score);
-        ball->setPartial(LEFT_BOX_TAG);
-        if (seg == 1) {
-            ball->setPartial(RIGHT_BOX_TAG);
+        if (barrier == 5) {
+            int idx = rand() % 3;
+            int unit = roundOfferUnit[round - 1][idx];
+            auto piece = Coin::create(coin, StringUtils::format("%dK",unit));
+            piece->setScore(unit);
+            piece->setPosition(p);
+            addChild(piece);
+            
+            piece->runAction(
+                                  Sequence::create(
+                                                   MoveTo::create(3, Vec2(p.x,0)),
+                                                   CallFuncN::create(CC_CALLBACK_1(Player::ballToDest, this)),
+                                                   NULL)
+                                  );
+            offerPieces.pushBack(piece);
+        } else {
+            auto ball = Ball::create(Color4F(CCRANDOM_0_1(),CCRANDOM_0_1(),CCRANDOM_0_1(),1), Color4F(CCRANDOM_0_1(),CCRANDOM_0_1(),CCRANDOM_0_1(),1), text);
+            ball->setScore(score);
+            ball->setPartial(LEFT_BOX_TAG);
+            if (seg == 1) {
+                ball->setPartial(RIGHT_BOX_TAG);
+            }
+            
+            ball->setPosition(p);
+            addChild(ball);
+            
+            ball->runAction(Sequence::create(MoveTo::create(3, Vec2(p.x,0)),CallFuncN::create(CC_CALLBACK_1(Player::ballToDest, this)),NULL));
+            balls.pushBack(ball);
         }
-        
-        ball->setPosition(p);
-        addChild(ball);
-        
-        ball->runAction(Sequence::create(MoveTo::create(3, Vec2(p.x,0)),CallFuncN::create(CC_CALLBACK_1(Player::ballToDest, this)),NULL));
-        balls.pushBack(ball);
     }
+}
+
+void Player::nextRound(int round) {
+    this->round = round;
+    this->offerTotalScore = 0;
+    reset(2, false);
 }
 
 void Player::reset(int barrier,bool potentialEvaluation) {
@@ -203,10 +233,12 @@ void Player::reset(int barrier,bool potentialEvaluation) {
     this->isPotentialEvaluation = potentialEvaluation;
     this->elliapsedTime = 0;
     this->totalScore = 0;
+    this->potentialTotalScore = 0;
     this->removeAllChildren();
     _eventDispatcher->removeAllEventListeners();
-    balls.clear();
+    clearRunningBalls();
     initComponent();
+    updateTipByBarrier(barrier);
     scheduleTask();
 }
 
@@ -217,6 +249,18 @@ void Player::clearRunningBalls() {
         }
     }
     balls.clear();
+    for (Coin* coin : coins) {
+        if (coin) {
+            ballToDest(coin);
+        }
+    }
+    coins.clear();
+    for(Coin* coin : offerPieces) {
+        if (coin) {
+            ballToDest(coin);
+        }
+    }
+    offerPieces.clear();
 }
 
 PopDialog* Player::createPopDialog() {
@@ -225,36 +269,36 @@ PopDialog* Player::createPopDialog() {
 	return pop;
 }
 
-void Player::doCalculateScore(float dt) {
-    elliapsedTime += dt;
-    auto label = static_cast<Label*>(getChildByTag(TIME_TIP_TAG));
-    if (label) {
-        label->setString(StringUtils::format("用时:%2.1f",elliapsedTime));
-    } else {
-        label = Label::createWithSystemFont(StringUtils::format("用时:%2.1f",elliapsedTime), "Arial", 25);
-        label->setTag(TIME_TIP_TAG);
-        label->setPosition(VisibleRect::center() - Vec2(0,30));
-        addChild(label);
-    }
+void Player::updateSpriteStatus() {
     for (Ball* ball : balls) {
         if (ball && ball->getPartial() == LEFT_BOX_TAG && ball->isCollisionBox(leftBox)) {
             totalScore += ball->getScore();
             ballToDest(ball);
-            CCLOG("Player::leftBox");
         }
         if (ball && ball->getPartial() == RIGHT_BOX_TAG && ball->isCollisionBox(rightBox)) {
             totalScore -= ball->getScore();
             ballToDest(ball);
-            CCLOG("Player::rightBox");
         }
     }
     for (Ball* ball : balls) {
-        if (!ball->isRunning()) {
+        if (ball && !ball->isRunning()) {
             balls.eraseObject(ball);
         }
     }
-    std::string failureTip,failureAction,successTip,successAction;
-    char* processFormatTip;
+    for (Coin* coin : offerPieces) {
+        if (coin && (coin->isCollisionBox(leftBox) || coin->isCollisionBox(rightBox))) {
+            offerTotalScore += coin->getScore();
+            ballToDest(coin);
+        }
+    }
+    for (Coin* coin : offerPieces) {
+        if (coin && !coin->isRunning()) {
+            offerPieces.eraseObject(coin);
+        }
+    }
+}
+
+void Player::updateTipByBarrier(int barrier) {
     switch (barrier) {
         case 1:
         {
@@ -262,25 +306,25 @@ void Player::doCalculateScore(float dt) {
             failureAction = "重新开始";
             successTip = "简历投递成功";
             successAction = "开始笔试";
-            processFormatTip = const_cast<char*>(string("简历完成:%d%%").c_str());
+            processFormatTip = "简历完成:%.0f%%";
         }
-        break;
+            break;
         case 2:
         {
             failureTip ="笔试未通过,用时超限！";
             failureAction = "潜力测评";
             successTip = "笔试通过";
             successAction = "开始面试";
-            processFormatTip = const_cast<char*>(string("笔试分数:%d").c_str());
+            processFormatTip = "笔试分数:%.0f";
         }
-        break;
+            break;
 		case 3:
 		{
 			failureTip = "面试未通过，用时超限！";
 			failureAction = "潜力测试";
 			successTip = "面试通过";
 			successAction = "性格面试";
-			processFormatTip = const_cast<char*>(string("面试分数：%d").c_str());
+			processFormatTip = "面试分数：%.0f";
 		}
 			break;
 		case 4:
@@ -289,19 +333,42 @@ void Player::doCalculateScore(float dt) {
 			failureAction = "潜力测试";
 			successTip = "性格面试通过";
 			successAction = "谈Offer";
-			processFormatTip = const_cast<char*>(string("性格面试分数：%d").c_str());
+			processFormatTip = "性格面试分数：%.0f";
 		}
 			break;
         default:
             break;
     }
-    
+}
+
+void Player::doCalculateScore(float dt) {
+    elliapsedTime += dt;
+    updateScoreTip(TIME_TIP_TAG, "用时:%2.1f",elliapsedTime, VisibleRect::center() - Vec2(0,30));
+
+    updateSpriteStatus();
+
+    if (barrier == 5) {
+        updateScoreTip(OFFER_SCORE_TIP_TAG,"工资:%.0fK", offerTotalScore, VisibleRect::center());
+    } else {
+        updateScoreTip(BARRIER_SCORE_TIP_TAG, (processFormatTip), totalScore, VisibleRect::center());
+    }
+
     if (elliapsedTime >= 20.f) {
-        unscheduleTask();
-        clearRunningBalls();
-        
-		auto pop = createPopDialog();
-        
+        barrierTimeout(failureTip,failureAction);
+        return;
+    }
+    if (barrier != 5 && totalScore >= 20) {
+        barrierSuccess(successTip, successAction);
+    }
+}
+
+void Player::barrierTimeout(const string& failureTip,const string& failureAction) {
+    unscheduleTask();
+    clearRunningBalls();
+    removeTipOnPop();
+    auto pop = createPopDialog();
+    Menu* menu = nullptr;
+    if (barrier < 5) {
         auto label = Label::createWithSystemFont(failureTip, "", 28);
         label->setPosition(VisibleRect::center() + Vec2(0,30));
         pop->addChild(label);
@@ -313,79 +380,100 @@ void Player::doCalculateScore(float dt) {
                 reset(barrier,false);
             }
         });
-        auto menu = Menu::create(nextMenu,nullptr);
-        menu->setGlobalZOrder(1);
-        menu->setPosition(VisibleRect::center() - Vec2(0,60));
-        pop->addChild(menu);
-        
-        pop->setPosition(Vec2::ZERO);
-        addChild(pop,2);
-        return;
-    }
-    if (totalScore >= 20) {
-        totalScore = firstBarrierPassScore;
-        unscheduleTask();
-        
-        clearRunningBalls();
-        
-		auto pop = createPopDialog();
-        
-        auto label = Label::createWithSystemFont(successTip, "", 28);
+        menu = Menu::create(nextMenu,nullptr);
+    } else {
+        auto label = Label::createWithSystemFont(StringUtils::format("您获取的第 %d 个offer是 %d K",round,offerTotalScore), "", 28);
         label->setPosition(VisibleRect::center() + Vec2(0,30));
         pop->addChild(label);
+        MenuItemFont* nextOffer = nullptr;
+        auto shareMenu = share();
+        if (round < 3) {
+            nextOffer =MenuItemFont::create("寻找下一个offer", [=](Ref* node){
+                nextRound(++round);
+            });
+        }
         
-        auto nextMenu = MenuItemFont::create(successAction, [=](Ref* node){
-            reset(++barrier,false);
-        });
-        auto menu = Menu::create(nextMenu,nullptr);
-        menu->setGlobalZOrder(1);
-        menu->setPosition(VisibleRect::center() - Vec2(0,60));
-        pop->addChild(menu);
-        
-        pop->setPosition(Vec2::ZERO);
-        addChild(pop,2);
+        if (nextOffer) {
+            menu = Menu::create(nextOffer,shareMenu,nullptr);
+        } else {
+            menu = Menu::create(shareMenu,nullptr);
+        }
     }
-    auto processLabel = static_cast<Label*>(getChildByTag(BARRIER_SCORE_TIP_TAG));
-    if (processLabel) {
-        processLabel->setString(StringUtils::format(processFormatTip,totalScore));
-    } else {
-        processLabel = Label::createWithSystemFont(StringUtils::format(processFormatTip,totalScore), "Arial", 25);
-        processLabel->setTag(BARRIER_SCORE_TIP_TAG);
-        processLabel->setPosition(VisibleRect::center());
-        addChild(processLabel);
+    
+    menu->setGlobalZOrder(1);
+    menu->setPosition(VisibleRect::center() - Vec2(0,60));
+    pop->addChild(menu);
+    pop->setPosition(Vec2::ZERO);
+    addChild(pop,2);
+}
+
+void Player::removeTipOnPop() {
+    removeTipOnPopByTag(BARRIER_SCORE_TIP_TAG);
+    removeTipOnPopByTag(TIME_TIP_TAG);
+    removeTipOnPopByTag(POTENTIAL_SCORE_TIP_TAG);
+    removeTipOnPopByTag(POTENTIAL_LIFE_TIP_TAG);
+    removeTipOnPopByTag(OFFER_SCORE_TIP_TAG);
+}
+
+void Player::removeTipOnPopByTag(int tag) {
+    auto node = getChildByTag(tag);
+    if (node) {
+        node->removeFromParent();
     }
 }
 
-void Player::updateLifeTip() {
-	auto lifeTip = static_cast<Label*>(getChildByTag(POTENTIAL_LIFE_TIP_TAG));
-	if (lifeTip) {
-		lifeTip->setString(StringUtils::format("生命值:%d", potentialLife));
-	}
-	else {
-		lifeTip = Label::createWithSystemFont(StringUtils::format("生命值:%d", potentialLife), "", 25);
-		lifeTip->setTag(POTENTIAL_LIFE_TIP_TAG);
-		lifeTip->setPosition(VisibleRect::center());
-		addChild(lifeTip);
-	}
+void Player::barrierSuccess(const string& successTip,const string& successAction) {
+    totalScore = firstBarrierPassScore;
+    unscheduleTask();
+    
+    clearRunningBalls();
+    
+    removeTipOnPop();
+    
+    auto pop = createPopDialog();
+    
+    auto label = Label::createWithSystemFont(successTip, "", 28);
+    label->setPosition(VisibleRect::center() + Vec2(0,30));
+    pop->addChild(label);
+    
+    auto nextMenu = MenuItemFont::create(successAction, [=](Ref* node){
+        reset(++barrier,false);
+    });
+    auto menu = Menu::create(nextMenu,nullptr);
+    menu->setGlobalZOrder(1);
+    menu->setPosition(VisibleRect::center() - Vec2(0,60));
+    pop->addChild(menu);
+    
+    pop->setPosition(Vec2::ZERO);
+    addChild(pop,2);
 }
 
-void Player::updatePotentialScoreTip() {
-	auto label = static_cast<Label*>(getChildByTag(POTENTIAL_SCORE_TIP_TAG));
+void Player::updateScoreTip(int tag,const string& format,float score,const Vec2& p) {
+    auto label = static_cast<Label*>(getChildByTag(tag));
 	if (label) {
-		label->setString(StringUtils::format("分数:%d", potentialTotalScore));
+		label->setString(StringUtils::format(const_cast<char*>(format.c_str()), score));
 	}
 	else {
-		label = Label::createWithSystemFont(StringUtils::format("分数:%d", potentialTotalScore), "", 25);
-		label->setTag(POTENTIAL_SCORE_TIP_TAG);
-		label->setPosition(VisibleRect::center() - Vec2(0, 30));
+		label = Label::createWithSystemFont(StringUtils::format(const_cast<char*>(format.c_str()), score), "Arial", 25);
+		label->setTag(tag);
+		label->setPosition(p);
 		addChild(label);
 	}
 }
 
-void Player::reducePotentialLife(float dt) {
+MenuItemFont* Player::share() {
+    auto shareMenu = MenuItemFont::create("分享", [=](Ref* node){
+    });
+    return shareMenu;
+}
+
+void Player::reducePotentialLife(Node* node) {
 	potentialLife--;
-	updateLifeTip();
+    updateScoreTip(POTENTIAL_LIFE_TIP_TAG, "生命值:%.0f", potentialLife, VisibleRect::center());
 	if (potentialLife <= 0) {
+        clearRunningBalls();
+        removeTipOnPop();
+        unscheduleTask();
 		potentialLife = 0;
 		auto pop = createPopDialog();
 
@@ -394,10 +482,10 @@ void Player::reducePotentialLife(float dt) {
 		pop->addChild(label);
 
 		auto replayMenu = MenuItemFont::create("重新开始", [=](Ref* node){
-			reset(1, false);
+			reset(barrier, false);
 		});
-		auto shareMenu = MenuItemFont::create("分享", [=](Ref* node){
-		});
+        replayMenu->setPosition(Vec2::ZERO);
+		auto shareMenu = share();
 		auto menu = Menu::create(replayMenu, shareMenu,nullptr);
 
 		menu->setGlobalZOrder(1);
@@ -416,9 +504,9 @@ void Player::doPotentialEvaluationTask(float dt) {
             ballToDest(coin);
 			if (coin->getRewardType() == 2) {
 				this->potentialLife++;
-				this->updateLifeTip();
+				updateScoreTip(POTENTIAL_LIFE_TIP_TAG, "生命值:%.0f", potentialLife, VisibleRect::center());
 			}
-			updatePotentialScoreTip();
+            updateScoreTip(POTENTIAL_SCORE_TIP_TAG, "分数:%.0f", potentialTotalScore, VisibleRect::center() - Vec2(0, 30));
         }
     }
     for (Coin* coin : coins) {

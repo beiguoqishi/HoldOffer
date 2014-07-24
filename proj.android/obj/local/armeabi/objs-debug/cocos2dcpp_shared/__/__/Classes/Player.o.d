@@ -311,7 +311,8 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/Player.o: \
  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/proj.android/../cocos2d/cocos/./deprecated/CCNotificationCenter.h \
  /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/proj.android/../cocos2d/cocos/./deprecated/CCDeprecated.h \
  jni/../../Classes/VisibleRect.h jni/../../Classes/Box.h \
- jni/../../Classes/Ball.h jni/../../Classes/PopDialog.h
+ jni/../../Classes/Ball.h jni/../../Classes/PopDialog.h \
+ jni/../../Classes/Coin.h
 
 jni/../../Classes/Player.h:
 
@@ -942,3 +943,5 @@ jni/../../Classes/Box.h:
 jni/../../Classes/Ball.h:
 
 jni/../../Classes/PopDialog.h:
+
+jni/../../Classes/Coin.h:

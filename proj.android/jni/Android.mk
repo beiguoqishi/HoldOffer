@@ -13,7 +13,8 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 		   ../../Classes/VisibleRect.cpp \
 		   ../../Classes/Box.cpp \
 		   ../../Classes/Ball.cpp \
-		   ../../Classes/PopDialog.cpp
+		   ../../Classes/PopDialog.cpp \
+		   ../../Classes/Coin.cpp
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 

@@ -9,7 +9,9 @@
 /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/proj.android/assets/box.png \
 /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/proj.android/assets/CloseNormal.png \
 /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/proj.android/assets/CloseSelected.png \
+/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/proj.android/assets/coin.png \
 /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/proj.android/assets/fonts \
 /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/proj.android/assets/HelloWorld.png \
+/Users/liupengtao/projects/game/cocos2d-x/HoldOffer/proj.android/assets/red_heart.png \
 /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/proj.android/assets/fonts/Marker Felt.ttf \
 /Users/liupengtao/projects/game/cocos2d-x/HoldOffer/proj.android/bin/AndroidManifest.xml \
