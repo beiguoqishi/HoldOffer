@@ -468,7 +468,10 @@ MenuItemFont* Player::share() {
 }
 
 void Player::reducePotentialLife(Node* node) {
-	potentialLife--;
+    Coin* coin = static_cast<Coin*>(node);
+    if (coin->getRewardType() != 2) {
+        potentialLife--;
+    }
     updateScoreTip(POTENTIAL_LIFE_TIP_TAG, "生命值:%.0f", potentialLife, VisibleRect::center());
 	if (potentialLife <= 0) {
         clearRunningBalls();
@@ -504,6 +507,9 @@ void Player::doPotentialEvaluationTask(float dt) {
             ballToDest(coin);
 			if (coin->getRewardType() == 2) {
 				this->potentialLife++;
+                if (potentialLife >= 3) {
+                    potentialLife = 3;
+                }
 				updateScoreTip(POTENTIAL_LIFE_TIP_TAG, "生命值:%.0f", potentialLife, VisibleRect::center());
 			}
             updateScoreTip(POTENTIAL_SCORE_TIP_TAG, "分数:%.0f", potentialTotalScore, VisibleRect::center() - Vec2(0, 30));
