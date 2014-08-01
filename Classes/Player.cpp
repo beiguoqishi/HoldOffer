@@ -175,7 +175,7 @@ void Player::generateBall(float dt) {
         }
         text = StringUtils::format("%d分",score);
         int rewardType = (rand() % redHeartRate) == 4 ? 2 : 1;
-        auto coinSprite = Coin::create(rewardType == 2 ? red_heart : coin,text);
+        auto coinSprite = Coin::create(rewardType == 2 ? red_heart : coin,"");
         coinSprite->setRewardType(rewardType);
         coinSprite->setScore(score);
         coinSprite->setPosition(p);
@@ -400,6 +400,7 @@ void Player::barrierTimeout(const string& failureTip,const string& failureAction
         }
     }
     
+	menu->alignItemsVerticallyWithPadding(10.f);
     menu->setGlobalZOrder(1);
     menu->setPosition(VisibleRect::center() - Vec2(0,60));
     pop->addChild(menu);
@@ -468,7 +469,11 @@ MenuItemFont* Player::share() {
 }
 
 void Player::reducePotentialLife(Node* node) {
-	potentialLife--;
+	Coin* coin = static_cast<Coin*>(node);
+	if (coin->getRewardType() != 2) {
+		potentialLife--;
+	}
+	
     updateScoreTip(POTENTIAL_LIFE_TIP_TAG, "生命值:%.0f", potentialLife, VisibleRect::center());
 	if (potentialLife <= 0) {
         clearRunningBalls();
@@ -504,6 +509,9 @@ void Player::doPotentialEvaluationTask(float dt) {
             ballToDest(coin);
 			if (coin->getRewardType() == 2) {
 				this->potentialLife++;
+				if (this->potentialLife >= 3) {
+					this->potentialLife = 3;
+				}
 				updateScoreTip(POTENTIAL_LIFE_TIP_TAG, "生命值:%.0f", potentialLife, VisibleRect::center());
 			}
             updateScoreTip(POTENTIAL_SCORE_TIP_TAG, "分数:%.0f", potentialTotalScore, VisibleRect::center() - Vec2(0, 30));
